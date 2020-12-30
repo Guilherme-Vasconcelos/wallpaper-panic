@@ -4,8 +4,9 @@ something normal? Then this script is for you!
 
 ### Compatibility
 **WIP, not working yet!**
-Wallpaper Panic is written in bash, which should not be a problem if you are
-using a Unix-based operating system.
+
+Wallpaper Panic is written in bash, which should be installed by default in
+most Unix-based operating systems.
 
 The major compatibility problem is that I have not found a way to change
 wallpapers in a way that is desktop environment agnostic, which means only
@@ -21,4 +22,4 @@ Planned to work on:
 **WIP**
 
 ### License
-Licensed under the MIT license. Please refer to LICENSE for more details.
+wallpaper-panic's is licensed under the MIT license. Please refer to LICENSE for more details.
