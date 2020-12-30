@@ -19,10 +19,10 @@ Wallpaper Panic is written in bash, which should be installed by default in
 most Unix-based operating systems.
 
 Unfortunately I have not found a desktop environment agnostic way to change
-wallpaper, so currently it only works on Xfce. Contributions are welcome from people
-of other environments.
+wallpaper, so currently it only works on Xfce.
 
 ### Usage
+
 **WIP**
 
 ### License
