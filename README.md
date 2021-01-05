@@ -10,6 +10,7 @@ in your path).
 as this is the command you will need to type to execute it.
 - Set a shortcut to execute it. If using Xfce, open the Keyboard application and
 go to the Application Shortcuts tab.
+- Nitrogen
 
 ### Compatibility
 
