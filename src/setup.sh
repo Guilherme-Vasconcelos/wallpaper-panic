@@ -6,10 +6,6 @@ CONFIG_DIR="$HOME/.config/wallpaper-panic"
 mkdir $CONFIG_DIR --parents
 cd $CONFIG_DIR
 
-# Create status file with content "1" if it does not exist yet. Here "1" is
-# just a convention, which means that when the script (wpan.sh) is executed
-# it will replace the user's permanent wallpaper with a temporary one. If
-# the file contains "0" instead, then it is the other way around.
 [ ! -e status ] && echo 1 > status
 
 clear
@@ -59,4 +55,4 @@ cat << EOF
 One last step: where would you like to place the wpan script?
 EOF
 
-# TODO
+# TODO: move the wpan script
