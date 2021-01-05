@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-# status conventions:
-# 1 means that when the script (wpan.sh) is executed it will replace the user's permanent
-# wallpaper with a temporary one. If the status file contains "0" instead, then it is the
-# other way around.
-
 # "permanent wallpaper" means the one which the user actively uses (and wants to hide)
 CONFIG_DIR="$HOME/.config/wallpaper-panic"
 cd $CONFIG_DIR
@@ -12,10 +7,25 @@ cd $CONFIG_DIR
 # Identify which action should be taken
 wallpaper_action=$( cat status )
 
-# TODO: set status to 0
-[ $wallpaper_action == 1 ] && echo "Replacing wallpaper1"
+if [ $wallpaper_action == 1 ]
+then
+    # replace permanent by temporary
+    [ $( ls | grep permanent | wc -l ) != 1 ] && \
+        echo "More than one wallpaper was found! Please go to $CONFIG_DIR" && \
+        echo "and make sure you only have one permanent_wallpaper." && exit 1
 
-# TODO: set status to 1
-[ $wallpaper_action == 0 ] && echo "Replacing wallpaper0"
+    permanent_wallpaper=$( find permanent_wallpaper.* )
+    nitrogen ./$permanent_wallpaper
+    echo 0 > status
+else
+    # replace temporary by permanent
+    [ $( ls | grep temporary | wc -l ) != 1 ] && \
+        echo "More than one wallpaper was found! Please go to $CONFIG_DIR" && \
+        echo "and make sure you only have one temporary_wallpaper." && exit 1
+
+    temporary_wallpaper=$( find temporary_wallpaper.* )
+    nitrogen ./$temporary_wallpaper
+    echo 1 > status
+fi
 
 echo
