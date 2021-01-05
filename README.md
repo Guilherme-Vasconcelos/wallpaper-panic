@@ -23,10 +23,7 @@ environment, so this part I will leave to you.
 wallpaper-panic is written in bash, which is installed by default in most (if not all) Unix-based
 operating systems.
 
-It also uses Nitrogen to change wallpapers, which only works with GNU/Linux distributions that
-use X windows (if you don't know that is, you are probably using it, so don't worry).
-
-In short, if you followed the installation instructions it should work in most environments.
+Support is planned for Xfce and GNOME.
 
 ### License
 wallpaper-panic's is licensed under the MIT license. Please refer to LICENSE for more details.

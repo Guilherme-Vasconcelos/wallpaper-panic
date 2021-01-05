@@ -4,9 +4,12 @@
 CONFIG_DIR="$HOME/.config/wallpaper-panic"
 cd $CONFIG_DIR
 
+set_wallpaper() {
+
+}
+
 # Identify which action should be taken
 wallpaper_action=$( cat status )
-
 if [ $wallpaper_action == 1 ]
 then
     # replace permanent by temporary
@@ -15,7 +18,7 @@ then
         echo "and make sure you only have one permanent_wallpaper." && exit 1
 
     permanent_wallpaper=$( find permanent_wallpaper.* )
-    nitrogen ./$permanent_wallpaper
+    set_wallpaper ./$permanent_wallpaper
     echo 0 > status
 else
     # replace temporary by permanent
@@ -24,8 +27,6 @@ else
         echo "and make sure you only have one temporary_wallpaper." && exit 1
 
     temporary_wallpaper=$( find temporary_wallpaper.* )
-    nitrogen ./$temporary_wallpaper
+    set_wallpaper ./$temporary_wallpaper
     echo 1 > status
 fi
-
-echo

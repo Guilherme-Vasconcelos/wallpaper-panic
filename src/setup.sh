@@ -19,7 +19,6 @@ EOF
 
 wait_for_return
 [ ! -e permanent_wallpaper.* ] && echo "Permanent wallpaper not found." && exit 1
-echo
 
 clear
 cat << EOF
@@ -33,24 +32,8 @@ EOF
 
 wait_for_return
 [ ! -e temporary_wallpaper.* ] && echo "Temporary wallpaper not found." && exit 1
-echo
 
 clear
-cat << EOF
-Temporary wallpaper was successfully detected. Now please install Nitrogen.
-
-Here are some quick ways to install it:
-For Debian-based distributions: sudo apt install nitrogen
-For Arch-based distributions: sudo pacman -S nitrogen
-
-If the above commands are not enough for you, you can check out their GitHub
-for build instructions: https://github.com/l3ib/nitrogen or check your
-distribution's manual to check if it is in the official repositories.
-EOF
-
-wait_for_return
-echo
-
 cat << EOF
 One last step: where would you like to place the wpan script?
 EOF
