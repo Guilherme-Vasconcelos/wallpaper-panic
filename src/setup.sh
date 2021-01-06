@@ -35,7 +35,8 @@ wait_for_return
 
 clear
 cat << EOF
-One last step: where would you like to place the wpan script?
+One last step: if you would like the script wpan.sh to be globally accessible,
+move it to ~/.local/bin/ or some other directory that is in your path.
 EOF
 
 # TODO: move the wpan script
