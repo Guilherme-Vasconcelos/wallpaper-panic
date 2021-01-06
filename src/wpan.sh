@@ -14,7 +14,7 @@ set_wallpaper () {
                 -s $1
             ;;
         *)
-            echo "It seems your desktop environment is not supported yet!"
+            echo "It seems your desktop environment is not supported!"
             exit 1
     esac
 }
