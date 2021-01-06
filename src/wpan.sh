@@ -26,7 +26,7 @@ then
         echo "and make sure you only have one permanent_wallpaper." && exit 1
 
     permanent_wallpaper=$( find permanent_wallpaper.* )
-    set_wallpaper $CONFIG_DIR/permanent_wallpaper
+    set_wallpaper $CONFIG_DIR/$permanent_wallpaper
     echo 0 > status
 else
     # replace temporary by permanent
